@@ -18,23 +18,24 @@
              class="navbar-menu"
              :class="{ 'is-active': showNav }">
             <div class="navbar-start">
-                <a class="navbar-item"
-                   href="#">
-                    Home
-                </a>
-                <a class="navbar-item"
-                   href="#">
-                    About
-                </a>
+                <router-link class="navbar-item" to="Home">Home</router-link>
+                <router-link class="navbar-item" to="Post">Journal</router-link>
+                <router-link class="navbar-item" to="/">About</router-link>
             </div>
 
             <div class="navbar-end">
                 <div class="navbar-item">
                     <p class="control">
-                        <a class="button is-primary"
-                           href="#">
-                            <span>Login</span>
-                        </a>
+                        <button class="button is-primary"
+                                v-show="!isLoggedIn()"
+                                @click="handleLogin()">Log In</button>
+                    </p>
+                </div>
+                <div class="navbar-item">
+                    <p class="control">
+                        <button class="button is-danger"
+                                v-show="isLoggedIn()"
+                                @click="handleLogout()">Log out</button>
                     </p>
                 </div>
             </div>
@@ -43,11 +44,23 @@
 </template>
 
 <script>
+import { isLoggedIn, login, logout } from '../../services/utils/auth'
 export default {
   name: 'Navbar',
   data () {
     return {
       showNav: false
+    }
+  },
+  methods: {
+    handleLogin () {
+      login()
+    },
+    handleLogout () {
+      logout()
+    },
+    isLoggedIn () {
+      return isLoggedIn()
     }
   }
 }

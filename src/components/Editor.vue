@@ -11,7 +11,7 @@ import _Quill from 'quill'
 // require styles
 import 'quill/dist/quill.core.css'
 import 'quill/dist/quill.snow.css'
-import defaultOptions from '../../services/options'
+import defaultOptions from '../../services/quill.options'
 const Quill = window.Quill || _Quill
 
 export default {
