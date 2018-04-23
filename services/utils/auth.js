@@ -6,7 +6,7 @@ const ACCESS_TOKEN_KEY = 'access_token'
 
 const CLIENT_ID = 'HqIc2BphKisXUfMJz2iT7QkyrZZAJogE'
 const CLIENT_DOMAIN = 'ywjj-auth.auth0.com'
-const REDIRECT = 'http://localhost:8080/callback'
+const REDIRECT = 'https://repost-29c3d.firebaseapp.com/callback'
 const SCOPE = 'openid'
 const AUDIENCE = 'https://ywjj-auth.auth0.com/api/v2/'
 

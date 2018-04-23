@@ -1,7 +1,7 @@
 import axios from 'axios'
 import { getAccessToken } from './utils/auth'
 
-const BASE_URL = 'localhost:8080'
+const BASE_URL = 'https://repost-29c3d.firebaseapp.com'
 
 function getAllPosts () {
   const url = `${BASE_URL}/api/posts/`
