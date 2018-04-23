@@ -21,7 +21,7 @@ export default {
 .spinner {
   width: 40px;
   height: 40px;
-  background-color: #333;
+  background-color: #1EC9AC;
 
   margin: 100px auto;
   -webkit-animation: sk-rotateplane 1.2s infinite ease-in-out;
